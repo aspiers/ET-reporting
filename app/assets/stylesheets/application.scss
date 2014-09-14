@@ -53,11 +53,21 @@ $font: Sans-serif, Arial, Verdana;
   font-size: 125%;
 }
 
-input {
-  display: block;
-  font-size: 18px;
-  padding: 8px;
-  width: 90%;
+#surveyor {
+  fieldset {
+    input[type="text"] {
+      display: block;
+      font-size: 1em;
+      padding: 8px;
+      width: 90%;
+    }
+    textarea {
+      display: block;
+      font-size: 1em;
+      padding: 8px;
+      width: 90%;
+    }
+  }
 }
 
 .quiet {
