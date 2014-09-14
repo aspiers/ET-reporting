@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140913144529) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "answers", force: true do |t|
     t.integer  "question_id"
     t.text     "text"
@@ -41,7 +38,7 @@ ActiveRecord::Schema.define(version: 20140913144529) do
     t.string   "input_mask_placeholder"
   end
 
-  add_index "answers", ["api_id"], name: "uq_answers_api_id", unique: true, using: :btree
+  add_index "answers", ["api_id"], name: "uq_answers_api_id", unique: true
 
   create_table "dependencies", force: true do |t|
     t.integer  "question_id"
@@ -83,7 +80,7 @@ ActiveRecord::Schema.define(version: 20140913144529) do
     t.string   "api_id"
   end
 
-  add_index "question_groups", ["api_id"], name: "uq_question_groups_api_id", unique: true, using: :btree
+  add_index "question_groups", ["api_id"], name: "uq_question_groups_api_id", unique: true
 
   create_table "questions", force: true do |t|
     t.integer  "survey_section_id"
@@ -108,7 +105,7 @@ ActiveRecord::Schema.define(version: 20140913144529) do
     t.string   "api_id"
   end
 
-  add_index "questions", ["api_id"], name: "uq_questions_api_id", unique: true, using: :btree
+  add_index "questions", ["api_id"], name: "uq_questions_api_id", unique: true
 
   create_table "response_sets", force: true do |t|
     t.integer  "user_id"
@@ -121,8 +118,8 @@ ActiveRecord::Schema.define(version: 20140913144529) do
     t.string   "api_id"
   end
 
-  add_index "response_sets", ["access_code"], name: "response_sets_ac_idx", unique: true, using: :btree
-  add_index "response_sets", ["api_id"], name: "uq_response_sets_api_id", unique: true, using: :btree
+  add_index "response_sets", ["access_code"], name: "response_sets_ac_idx", unique: true
+  add_index "response_sets", ["api_id"], name: "uq_response_sets_api_id", unique: true
 
   create_table "responses", force: true do |t|
     t.integer  "response_set_id"
@@ -142,8 +139,8 @@ ActiveRecord::Schema.define(version: 20140913144529) do
     t.string   "api_id"
   end
 
-  add_index "responses", ["api_id"], name: "uq_responses_api_id", unique: true, using: :btree
-  add_index "responses", ["survey_section_id"], name: "index_responses_on_survey_section_id", using: :btree
+  add_index "responses", ["api_id"], name: "uq_responses_api_id", unique: true
+  add_index "responses", ["survey_section_id"], name: "index_responses_on_survey_section_id"
 
   create_table "survey_sections", force: true do |t|
     t.integer  "survey_id"
@@ -186,8 +183,8 @@ ActiveRecord::Schema.define(version: 20140913144529) do
     t.integer  "survey_version",         default: 0
   end
 
-  add_index "surveys", ["access_code", "survey_version"], name: "surveys_access_code_version_idx", unique: true, using: :btree
-  add_index "surveys", ["api_id"], name: "uq_surveys_api_id", unique: true, using: :btree
+  add_index "surveys", ["access_code", "survey_version"], name: "surveys_access_code_version_idx", unique: true
+  add_index "surveys", ["api_id"], name: "uq_surveys_api_id", unique: true
 
   create_table "validation_conditions", force: true do |t|
     t.integer  "validation_id"
