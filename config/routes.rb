@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'surveys#index'
 
+  devise_for :users
+
   mount Surveyor::Engine => "/surveys", :as => "surveyor"
 
   # Example of regular route:
