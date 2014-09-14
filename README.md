@@ -10,29 +10,6 @@ trawl company websites and extract data about carbon emissions etc.)
 It will eventually also support generation of reports on the collected
 data.
 
-## Technical implementation details
-
-### `surveyor` gem
-
-We use [the `surveyor` gem](https://github.com/NUBIC/surveyor) to
-implement the survey.  The questions are specified in
-[a single file](surveys/et_reporting_survey.rb) which uses a simple
-Ruby-based DSL.  The gem's documentation explains this DSL in more
-detail:
-
-- ["Kitchen Sink" survey](https://raw.githubusercontent.com/NUBIC/surveyor/master/lib/generators/surveyor/templates/surveys/kitchen_sink_survey.rb)
-- [Question Types](https://github.com/NUBIC/surveyor/blob/master/doc/question%20types.png)
-
-This should allow non-coders to update the survey in the future
-without the expense of implementing sophisticated survey editing
-functionality.
-
-### User management / authentication / invitation
-
-We use the [`devise`](https://github.com/plataformatec/devise) and
-[`devise_invitable`](https://github.com/scambra/devise_invitable)
-gems.
-
 ## Running the application
 
 ### Install Ruby
@@ -94,7 +71,31 @@ bundle exec rails server
 
 and now you should be able to visit: [http://localhost:3000/](http://localhost:3000/)
 
-## Relevant Links
+## Development links
 
   - [HackPad](https://hack4good.hackpad.com/ET-Corporate-Reporting-9Cf6al4I7YD)
   - [Hipchat room: CP: 1% Project](https://hack4good.hipchat.com/chat)
+
+## Technical implementation details
+
+### `surveyor` gem
+
+We use [the `surveyor` gem](https://github.com/NUBIC/surveyor) to
+implement the survey.  The questions are specified in
+[a single file](surveys/et_reporting_survey.rb) which uses a simple
+Ruby-based DSL.  The gem's documentation explains this DSL in more
+detail:
+
+- ["Kitchen Sink" survey](https://raw.githubusercontent.com/NUBIC/surveyor/master/lib/generators/surveyor/templates/surveys/kitchen_sink_survey.rb)
+- [Question Types](https://github.com/NUBIC/surveyor/blob/master/doc/question%20types.png)
+
+This should allow non-coders to update the survey in the future
+without the expense of implementing sophisticated survey editing
+functionality.
+
+### User management / authentication / invitation
+
+We use the [`devise`](https://github.com/plataformatec/devise) and
+[`devise_invitable`](https://github.com/scambra/devise_invitable)
+gems.
+
