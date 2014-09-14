@@ -14,17 +14,45 @@
  *= require_self
  */
 
-.sitelogo {
-  background: url(http://www.eio.org.uk/img/bg_logo.png);
-  display: block;
-  width: 850px;
-  height: 71px;
+$font: Sans-serif, Arial, Verdana;
+
+ body {
+  background: #fff;
+  font-family: $font;
+  text-align: center;
+ }
+
+#wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  background: #e1e1e1;
+  border: 8px solid #E1E1E1;
+  border-width-top: 16px;
 }
 
+#topbanner {
+  text-align: center;
+  background:#fff;
+  margin-bottom: 12px;
+  .sitelogo {
+    text-align: center;
+    background: url(http://www.eio.org.uk/img/bg_logo.png);
+    display: inline-block;
+    margin: 0 auto;
+    width: 850px;
+    height: 71px;
+  }
 
-.survey_title {
-  background: url(http://www.eio.org.uk/img/bg_logo.png) no-repeat;
-  display: block;
-  /* push the text down below the image:*/
-  padding-top: 75px; 
+}
+
+#surveyor {
+  background: #fff;
+  font-family: $font;
+}
+.input {
+  font-size: 125%;
+}
+
+.quiet { 
+display: none;
 }
