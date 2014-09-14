@@ -1,9 +1,9 @@
 # encoding: UTF-8
-#
-survey "Report survery", :default_mandatory => false do
+
+survey "ET Corporate Reporting", :default_mandatory => false do
 
   section "Company details" do
-    label "These questions are examples of the basic supported input types"
+    label "These questions are about the Company"
 
     group "Questions about the Company", :display_type => :default do
       q "Company name:"
@@ -34,10 +34,11 @@ survey "Report survery", :default_mandatory => false do
   section "Carbon Emissions" do
     label "These questions are about the Carbon Emissions"
 
-    group "Carbon emissions" do
+    group "Reporting period" do
       q "Reporting period", pick: :one
       a "1 January 2011 to 31 December 2012"
       a "Other", :string
+    end
 
       q "Please enter your carbon emissions in metric tonnes of CO2e:"
       a "Scope 1|tCO2e", :integer
