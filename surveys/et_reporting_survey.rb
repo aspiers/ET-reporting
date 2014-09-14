@@ -1,11 +1,9 @@
 # encoding: UTF-8
-# Question#is_mandatory is now false by default.
-
-survey "ET Corporate Report", :default_mandatory => false do
+#
+survey "Report survery", :default_mandatory => false do
 
   section "Company details" do
-
-    # label "These questions are about the Company"
+    label "These questions are examples of the basic supported input types"
 
     group "Questions about the Company", :display_type => :default do
       q "Company name:"
@@ -34,7 +32,7 @@ survey "ET Corporate Report", :default_mandatory => false do
   end
 
   section "Carbon Emissions" do
-    # label "These questions are about the Carbon Emissions"
+    label "These questions are about the Carbon Emissions"
 
     group "Carbon emissions" do
       q "Reporting period", pick: :one
@@ -86,6 +84,8 @@ survey "ET Corporate Report", :default_mandatory => false do
   end
 
   section "Boundary Settings" do
+    label  "Boundary Settings"
+
     q "What reporting boundary method have you adopted under the terms of the GHG Protocol?"
     a :string
 
@@ -106,12 +106,12 @@ survey "ET Corporate Report", :default_mandatory => false do
       a :string
 
       q "Please attach a full breakdown with the percentage coverage for each:"
-      a #upload button document
+      a "upload button document"
     end
-
   end
 
   section "Verification/Assurance (to be completed by an independent third party)" do
+    label  "Boundary Settings"
     q "Name of Verifier:"
     a :string
 
@@ -140,7 +140,8 @@ survey "ET Corporate Report", :default_mandatory => false do
     a :string
 
     q "Please attach the verification full statement"
-    a #upload button to attach a verification full statement
+    a "upload button to attach a verification full statement"
+
   end
 
 end
