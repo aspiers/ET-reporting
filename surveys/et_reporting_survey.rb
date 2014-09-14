@@ -118,10 +118,10 @@ survey "ET Corporate Report", :default_mandatory => false do
     q "Which standard has been used to assure the data? (E.g. ISO 14064, AA1000AS etc)"
     a :string
 
-    q "Which Scopes have been verified?", pick: :any
+    q "Which Scopes have been verified?" #pick: :any
     answer "Scope 1"
     answer "Scope 2"
-    answer "Scope 3" :other
+    answer "Scope 3"
 
     q "If the company is reporting Scope 3 emissions, has it covered all of the Scopes accurately (for Scope 3 please refer to the GHG Protocol new Corporate Value Chain (Scope 3) Accounting and Reporting Standard), inclusing any GHGs not covered by the GHG Protocol which may be material?"
     a "Yes", :string
