@@ -31,7 +31,5 @@ survey "ET Corporate Report", :default_mandatory => false do
       q "Sustainability report link:"
       a :string
     end
-
-
   end
 end
