@@ -35,6 +35,8 @@ module SurveyorControllerCustomMethods
   end
 end
 class SurveyorController < ApplicationController
+  before_action :authenticate_user!
+
   include Surveyor::SurveyorControllerMethods
   include SurveyorControllerCustomMethods
 end
