@@ -12,6 +12,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'surveyor', '~> 1.4.0', github: 'NUBIC/surveyor'
 
+gem 'devise'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
