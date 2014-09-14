@@ -1,7 +1,7 @@
 # The ET Reporting Project
 
-See https://geekli.st/hackathon/hack4good-06/project/541565a6d29d5eb10864d1b9
-for the background behind this project.
+For the background behind this repository, see [the `#hack4good 0.6` project page](https://geekli.st/hackathon/hack4good-06/project/541565a6d29d5eb10864d1b9),
+and [the slide-deck presented at the end of the event](http://bit.ly/eio-reporting-slides).
 
 This repository contains a Rails app that allows collection of carbon
 emission data from corporations and carbon analysts (volunteers who
