@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  root 'home#index'
-
   devise_for :users
 
   mount Surveyor::Engine => "/surveys", :as => "surveyor"
+
+  root 'surveyor#show'
 
   resources :admin do
     post :invite, on: :collection
