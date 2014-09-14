@@ -11,15 +11,19 @@ module SurveyorControllerCustomMethods
     super
     # @title = "You can take these surveys"
   end
+
   def create
     super
   end
+
   def show
     super
   end
+
   def edit
     super
   end
+
   def update
     super
   end
@@ -29,12 +33,16 @@ module SurveyorControllerCustomMethods
     # most of the above actions redirect to this method
     super # surveyor.available_surveys_path
   end
+
   def surveyor_finish
     # the update action redirects to this method if given params[:finish]
     super # surveyor.available_surveys_path
   end
 end
+
 class SurveyorController < ApplicationController
+  before_action :authenticate_user!
+
   include Surveyor::SurveyorControllerMethods
   include SurveyorControllerCustomMethods
 

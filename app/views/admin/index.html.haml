@@ -1,0 +1,23 @@
+%h1 Admin
+
+#invite
+  %h2 Invite user
+  = simple_form_for :user, url: :invite_admin_index do |f|
+    = f.input :email, as: :email
+    = f.submit
+
+
+%hr
+
+%h2 Surveys
+%ul
+  - @surveys.each do |survey|
+    %li
+      %strong= survey.title
+      There are #{survey.response_sets.count} responses.
+
+%hr
+%h2 Users
+%ul
+  - @users.each do |user|
+    %li= user.email
