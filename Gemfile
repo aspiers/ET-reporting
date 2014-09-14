@@ -13,6 +13,7 @@ gem 'spring',        group: :development
 gem 'surveyor', '~> 1.4.0', github: 'NUBIC/surveyor'
 
 gem 'devise'
+gem 'devise_invitable'
 
 group :production do
   gem 'pg'
