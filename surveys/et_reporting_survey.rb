@@ -119,9 +119,9 @@ survey "ET Corporate Report", :default_mandatory => false do
     a :string
 
     q "Which Scopes have been verified?", pick: :any
-    a "Scope 1", :answer Other
-    a "Scope 2", :answer Other
-    a "Scope 3", :answer Other
+    answer "Scope 1"
+    answer "Scope 2"
+    answer "Scope 3" :other
 
     q "If the company is reporting Scope 3 emissions, has it covered all of the Scopes accurately (for Scope 3 please refer to the GHG Protocol new Corporate Value Chain (Scope 3) Accounting and Reporting Standard), inclusing any GHGs not covered by the GHG Protocol which may be material?"
     a "Yes", :string
@@ -133,7 +133,7 @@ survey "ET Corporate Report", :default_mandatory => false do
 
     q "Is the data presented by the company representative of the company's entire scope of operations?"
     a "Yes"
-    a "No",
+    a "No"
     # If no, approximately what percentage does it cover? :string
 
     q "Please state any other further comments or qualifications:"
