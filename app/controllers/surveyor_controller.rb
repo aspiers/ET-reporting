@@ -35,7 +35,9 @@ module SurveyorControllerCustomMethods
   end
 end
 class SurveyorController < ApplicationController
-  layout 'surveyor_custom'
   include Surveyor::SurveyorControllerMethods
   include SurveyorControllerCustomMethods
+
+  layout 'surveyor_custom'
+
 end
