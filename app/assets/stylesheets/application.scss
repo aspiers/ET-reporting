@@ -73,3 +73,8 @@ $font: Sans-serif, Arial, Verdana;
 .quiet {
   display: none;
 }
+
+.q_label legend span {
+  display: none !important;
+  color: blue;
+}
