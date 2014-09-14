@@ -10,7 +10,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
 
@@ -19,8 +18,12 @@ $font: Sans-serif, Arial, Verdana;
  body {
   background: #fff;
   font-family: $font;
-  text-align: center;
  }
+
+ body#main {
+  text-align: left;
+  margin: 10px;
+}
 
 #wrapper {
   width: 1000px;
@@ -78,3 +81,4 @@ $font: Sans-serif, Arial, Verdana;
   display: none !important;
   color: blue;
 }
+

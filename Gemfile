@@ -14,6 +14,7 @@ gem 'surveyor', '~> 1.4.0', github: 'NUBIC/surveyor'
 
 gem 'devise'
 gem 'devise_invitable'
+gem 'simple_form'
 
 group :production do
   gem 'pg'
