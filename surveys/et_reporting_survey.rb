@@ -3,35 +3,33 @@
 
 survey "ET Corporate Report", :default_mandatory => false do
 
-  section "Basic questions" do
+  section "Page 1" do
 
-    label "These questions are about the Company"
+    group "Basic questions" do
+      label "These questions are about the Company"
 
-    group "Questions about the Company", :display_type => :default do
-      q "Company name:"
-      a :string
+      q "Questions about the Company"
+      a "Company name:", :string
+      a "Company website:", :string
+      a "Company contact details:", :string
 
-      q "Company website:"
-      a :string
-
-      q "Company contact details:"
-      a :string
+      q "Questions about the Sustainability Department"
+      a "Sustainability Officer name:", :string
+      a "Sustainability Office contact details", :string
+      a "Sustainability website:", :string
+      a "Sustainability report link:", :string
     end
 
-    group "Questions about the Sustainability Department", :display_type => :default do
-      q "Sustainability Officer name:"
-      a :string
+    group "Carbon emissions" do
+      q "Reporting period", pick: :one
+      a "1 January 2011 to 31 December 2012"
+      a "Other", :string
+    
+      q "Please enter your carbon emissions in metric tonnes of CO2e:"
+      a "Scope 1|tCO2e", :integer
+      a "Scope 2|tCO2e", :integer
+      a "Scope 3|tCO2e", :integer
 
-      q "Sustainability Office contact details"
-      a :string
-
-      q "Sustainability website:"
-      a :string
-
-      q "Sustainability report link:"
-      a :string
     end
-
-
   end
 end
