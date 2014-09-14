@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>EIOSurvey</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>EIOSurvey</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<div id="top-logo">
-<h1>hi!</h1>
-  <a class="sitelogo" href="./index.php" title="Home"></a>
-</div>
+    <div id="top-logo">
+      <h1>hi!</h1>
+      <a class="sitelogo" href="./index.php" title="Home"></a>
+    </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>
