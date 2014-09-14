@@ -40,3 +40,4 @@ gem 'surveyor', '~> 1.4.0', github: 'NUBIC/surveyor'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
