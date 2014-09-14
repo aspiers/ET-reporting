@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+.sitelogo {
+  background: url(http://www.eio.org.uk/img/bg_logo.png);
+  display: block;
+  width: 850px;
+  height: 71px;
+}
+
+
+.survey_title {
+  background: url(http://www.eio.org.uk/img/bg_logo.png) no-repeat;
+  display: block;
+  /* push the text down below the image:*/
+  padding-top: 75px; 
+}
